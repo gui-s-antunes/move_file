@@ -7,7 +7,7 @@ from os import path
 
 def path_exists(function):
     def checker(chosen_path):
-        return path.exists
+        return path.exists(chosen_path)
     return checker
 
 
