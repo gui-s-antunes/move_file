@@ -1,14 +1,21 @@
-from models.window import Window
+# from models.window import Window
 
 from datetime import datetime
+
+from functools import wraps
 
 from os import path
 
 
 # Tentar ver se dá pra fazer começar aqui, trazendo a função desejada nos parametros.
 def path_exists(function):
+    @wraps(function)
     def checker(chosen_path):
-        return path.exists(chosen_path)
+        """It Verifies whether argument is a valid path"""
+        if path.exists(chosen_path):
+            return function(chosen_path)
+        else:
+            return False
     return checker
 
 
