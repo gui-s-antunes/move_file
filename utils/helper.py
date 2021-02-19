@@ -1,9 +1,5 @@
-# from models.window import Window
-
 from datetime import datetime
-
 from functools import wraps
-
 from os import path
 
 
