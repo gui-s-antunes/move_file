@@ -33,7 +33,6 @@ class Mapeamento:
         Add a new file path to the file list.
         :param camin: new path to be added to the list of file pathes.
         """
-        """Adiciona arquivos que o usuário adiciona, vai sendo adicionado quantas vezes ele quiser"""
         self.__arquivos += camin
 
     @diretorio.setter
@@ -72,7 +71,7 @@ class Mapeamento:
         """
         file_log = self.diretorio + '/logfile-' + get_time() + '.txt'
         with open(file_log, 'w', encoding='utf-8') as file:
-            file.write(f'LogFile\n\n---\n\nBy: Guilherme Antunes\n\n---\n\nDestination folder: '
-                       f'{self.diretorio}\n\nDate-time: {get_time()}')
+            file.write(f'LogFile By: Guilherme Antunes\n\n---\n\nDestination folder: '
+                       f'{self.diretorio}\nDate-time: {get_time()}\n\nFiles (origin path):')
             for arq in self.arquivos:
                 file.write(f'\n{arq}')
