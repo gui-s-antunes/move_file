@@ -33,7 +33,7 @@ def get_time() -> str:
     return time_now.strftime('%b-%d-%Y_%H-%M-%S')
 
 
-def user_action(direc, files) -> int:
+def user_action(direc: str, files: list) -> int:
     """
     It checkes whether directory got a path and files got at least 1 path
     :param direc: string with a path (or empty)
