@@ -71,7 +71,7 @@ class Mapeamento:
         It creates a logfile that records added files (their original pathes).
         """
         file_log = self.diretorio + '/logfile-' + get_time() + '.txt'
-        with open(file_log, 'w') as file:
+        with open(file_log, 'w', encoding='utf-8') as file:
             file.write(f'LogFile\n\n---\n\nBy: Guilherme Antunes\n\n---\n\nDestination folder: '
                        f'{self.diretorio}\n\nDate-time: {get_time()}')
             for arq in self.arquivos:
