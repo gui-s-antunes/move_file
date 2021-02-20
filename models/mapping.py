@@ -61,7 +61,7 @@ class Mapeamento:
         It returns a list (string) of the files chosen by user.
         :return: a string with easier view format.
         """
-        lista = '\nArquivos:'
+        lista = '\nFiles:'
         for arquivo in self.__arquivos:
             lista += f'\n{arquivo}'
         return lista

@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, Label
 from os import startfile
 
-from mapping import Mapeamento
+from models.mapping import Mapeamento
 
 
 class Janela1:
@@ -47,7 +47,7 @@ class Janela1:
     def selecionando_diretorio(self) -> None:
         """Set directory"""
         self.mapeamento.diretorio = filedialog.askdirectory()
-        self.texto_diretorio.config(text=f'Diretório: {self.mapeamento.diretorio}')
+        self.texto_diretorio.config(text=f'Directory: {self.mapeamento.diretorio}')
 
     def aplica_move(self):
         """It moves the files chosen by user to the new directory, goes to the logfile maker and abre_diretorio func"""
