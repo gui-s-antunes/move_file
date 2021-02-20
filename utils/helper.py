@@ -31,3 +31,19 @@ def get_time() -> str:
     """Return time (string) with format: dd-mm-yy_h-m-s"""
     time_now = datetime.now()
     return time_now.strftime('%b-%d-%Y_%H-%M-%S')
+
+
+def user_action(direc, files) -> int:
+    """
+    It checkes whether directory got a path and files got at least 1 path
+    :param direc: string with a path (or empty)
+    :param files: list with pathes (or empty)
+    :return: A number that we choice to allow clear or aplly and clear buttons
+    """
+    if bool(direc) and bool(files):
+        return 2
+    elif bool(direc) or bool(files):
+        return 1
+    else:
+        return 0
+
