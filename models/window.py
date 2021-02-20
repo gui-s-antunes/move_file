@@ -87,11 +87,9 @@ class Janela1:
             3: ['disabled', 'disabled', 'disabled', 'disabled', 'normal']  # after pressed apply button
         }
 
-        # for state in choice.get(mode):
         choice_mode = choice.get(mode)
-        # dicio = zip(self.button_list, choice_mode)
+
         for position in zip(self.button_list, choice_mode):  # zip: (buttons[1], choice[1], buttons[2], choice[2]...)
             position[0]['state'] = position[1]  # button[1]['state'] = choice[1]...
-        # print(list(dicio))
 
 
